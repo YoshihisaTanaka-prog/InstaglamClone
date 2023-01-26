@@ -3,7 +3,7 @@ class PicturesController < ApplicationController
 
   # GET /picutres or /picutres.json
   def index
-    @picutres = Picture.all
+    @picutre = Picture.all
   end
 
   # GET /picutres/1 or /picutres/1.json
