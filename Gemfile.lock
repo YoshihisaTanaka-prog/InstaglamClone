@@ -88,6 +88,10 @@ GEM
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     date (3.3.3)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     ffi (1.15.5)
     globalid (1.0.0)
@@ -129,6 +133,8 @@ GEM
       net-protocol
     nio4r (2.5.8)
     nokogiri (1.14.0-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.14.0-x86_64-darwin)
       racc (~> 1.4)
     pg (1.4.5)
     public_suffix (5.0.1)
@@ -200,6 +206,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    sqlite3 (1.4.4)
     ssrf_filter (1.1.1)
     thor (1.2.1)
     tilt (2.0.11)
@@ -233,6 +240,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  x86_64-darwin-21
 
 DEPENDENCIES
   bcrypt
@@ -240,10 +248,11 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   carrierwave
+  dotenv-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_magick
-  pg (~> 1.1)
+  pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.6)
@@ -251,6 +260,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring
+  sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

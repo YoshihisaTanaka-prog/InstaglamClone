@@ -11,6 +11,18 @@ module Instaclone
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
+    # タイムゾーンの設定
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
+    
+    # ヘルパーなどを追加しないようにする設定
+    config.generators do |g|
+      g.assets false          # CSS, JavaScriptファイル生成せず
+      g.helper false          # Helperファイルを生成せず
+      g.skip_routes false     # trueならroutes.rb変更せず、falseなら通常通り変更
+      g.test_framework false  # testファイル生成せず
+    end 
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

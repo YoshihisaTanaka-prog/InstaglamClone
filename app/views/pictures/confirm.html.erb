@@ -1,12 +1,14 @@
 <h1>確認画面</h1>
-<%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
+<%= form_with(model: @picture, url: pictures_path, local: true) do |form| %>
   <!-- 確認画面でアップロードした画像を表示させるための記述 -->
-  <%= image_tag(@blog.image.url) if @blog.image && @blog.image.url %>
+  <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %>
   <%= form.hidden_field :image_cache %>
-  <%= form.submit "投稿する" %>
+  <%= form.hidden_field :title, value: @picture.title %>
+  <%= form.hidden_field :content, value: @picture.content %>
+  <%= form.submit t("appname.page.picture.submit") %>
 <% end %>
 
-<%= form_with(model:@blog, url:new_blog_path, local:true, method:"get") do |form| %>
+<%= form_with(model:@picture, url:new_picture_path, local:true, method:"get") do |form| %>
   <%= form.hidden_field :image_cache %>
-  <%= form.submit "戻る", name: "back" %>
+  <%= form.submit t("appname.back"), name: "back" %>
 <% end %>
