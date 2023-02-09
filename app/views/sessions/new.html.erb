@@ -18,17 +18,3 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-  var imageNum = 1;
-  window.addEventListener("load", function(){
-    setInterval(changeImage, 5000);
-  });
-  function changeImage(){
-    let imgURL = "/assets/screenshot" + imageNum + ".png";
-    $("#img").attr("src", imgURL)
-    imageNum += 1;
-    if (imageNum == 5) {
-      imageNum = 1;
-    }
-  }
-</script>
