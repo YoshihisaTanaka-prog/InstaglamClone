@@ -237,4 +237,13 @@ ja:
     dont_have_account: "アカウントをお持ちでないですか？"
     have_account: "アカウントをお持ちですか？"
   site_title: "インスタクローン"
+  activerecord:
+    models:
+      user: "ユーザ"
+      picture: "写真"
+    attributes:
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        password: "パスワード"
 

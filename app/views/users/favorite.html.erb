@@ -9,7 +9,7 @@
         <%= link_to picture.user.name, user_path(picture.user) if picture.user %>
       </p>
       <%= picture.title %><br>
-      <img src=<%= picture.image %>><br>
+      <img src="<%= picture.image %>"><br>
       <%= link_to t('appname.page.picture.show'), picture %>
       <%= link_to t('appname.page.picture.edit'), edit_picture_path(picture) if picture.user_id == session[:user_id] %>
       <%= link_to t('appname.page.picture.destroy'), picture, method: :delete, data: { confirm: t("appname.are_you_sure") }  if picture.user_id == session[:user_id] %>

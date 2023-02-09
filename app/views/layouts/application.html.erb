@@ -15,7 +15,7 @@
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
-    <% unless (controller_name == "users" && action_name == "new" ) || (controller_name == "sessions") %>
+    <% unless (controller_name == "users" && action_name == "new" ) || (controller_name == "users" && action_name == "create" ) || (controller_name == "sessions") %>
       <div style="width: 220px; position: fixed; top: 0; left: 0; margin-top: 50px;">
         <div aria-disabled="false" role="button" tabindex="0" style="cursor: pointer; margin-left: 20px;">
           <i data-visualcompletion="css-img" aria-label="Instagram" class="" role="img" style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v3/y-/r/yXM3FgMdVNX.png&quot;); background-position: 0px -52px; background-size: auto; width: 175px; height: 51px; background-repeat: no-repeat; display: inline-block;"></i>
@@ -32,7 +32,7 @@
         </ul>
       </div>
     <% end %>
-    <% if (controller_name == "users" && action_name == "new" ) || (controller_name == "sessions") %>
+    <% if (controller_name == "users" && action_name == "new" ) || (controller_name == "users" && action_name == "create" ) || (controller_name == "sessions") %>
       <div>
         <%= yield %>
       </div>
