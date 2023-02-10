@@ -1,6 +1,6 @@
 <h1><%= @user.name %>さんのお気に入り</h1>
 
-  <% @user.pictures.each do |picture| %>
+  <% @user.favorite_pictures.each do |picture| %>
     <div style="border-bottom: 1px solid #999; padding: 1em;" width='100%'>
       <p>
         <% if picture.user.avatar.url %>

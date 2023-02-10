@@ -83,6 +83,7 @@ class PicturesController < ApplicationController
       favorite = Favorite.new
       favorite.user_id = session[:user_id]
       favorite.picture_id = @picture.id
+      favorite.is_enabled = true
       favorite.save
     end
     redirect_to picture_path(@picture)

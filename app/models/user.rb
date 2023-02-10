@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :pictures, dependent: :destroy
 
   def favorite_pictures
-    favorites = Favorite.where(user_id: self.id)
+    favorites = Favorite.where(user_id: self.id, is_enabled: true)
     pictures = []
     favorites.each do |favorite|
       picture = Picture.find_by(id: favorite.picture_id)
